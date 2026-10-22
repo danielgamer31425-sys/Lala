@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Lala — pulseiras coloridas de miçangas feitas à mão.">
+<title>Lala | Pulseiras coloridas feitas à mão</title>
+<style>
+:root{--pink:#f0447b;--pink2:#ff77a1;--yellow:#ffbd45;--teal:#35a9b8;--ink:#173447;--cream:#fff9f4;--pale:#fff0f5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer;border:0}
+.announcement{background:var(--pink);color:#fff;text-align:center;padding:9px 12px;font-size:13px;font-weight:700}
+header{position:sticky;top:0;z-index:5;background:#fff;box-shadow:0 2px 14px #1834470d}
+.nav{max-width:1180px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:42px;font-weight:950;letter-spacing:-3px;line-height:.9;background:linear-gradient(90deg,var(--pink),var(--yellow),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo small{display:block;font-size:12px;letter-spacing:0;text-align:right;color:var(--ink)}
+nav{display:flex;gap:25px;font-weight:650;font-size:14px}nav a:hover{color:var(--pink)}
+.cart-top{background:var(--pale);border-radius:30px;padding:10px 15px;color:var(--pink);font-weight:800}
+.hero{background:linear-gradient(110deg,#fff2e5 0%,#fff0f5 48%,#ffe0e9 100%);overflow:hidden}
+.hero-inner{max-width:1180px;margin:auto;min-height:370px;padding:48px 22px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px}
+.eyebrow{color:var(--pink);text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:900}
+h1{font-size:clamp(38px,5vw,64px);line-height:1.02;letter-spacing:-2px;margin:14px 0;color:#173f55}
+h1 span{color:var(--pink)}.hero p{max-width:440px;line-height:1.65;color:#486171}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--pink);color:#fff;border-radius:30px;padding:13px 22px;font-weight:800;transition:.2s}
+.btn:hover{transform:translateY(-2px);background:#db2c66}.hero-art{min-height:280px;display:grid;place-items:center;position:relative}
+.bracelet-art{width:min(390px,90%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 50%,#fff7f4 0 31%,transparent 32%),conic-gradient(from 10deg,#ff5685,#ffc24d,#42c5bf,#8e7be8,#ff5685);box-shadow:0 25px 60px #d95a8a2c;position:relative;transform:rotate(-15deg)}
+.bracelet-art:before{content:"";position:absolute;inset:17%;border:20px dotted #fff9f2;border-radius:50%;box-shadow:0 0 0 9px #f0447b,0 0 0 19px #ffbd45,0 0 0 28px #39b5bc}
+.sticker{position:absolute;right:0;bottom:15px;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 8px 25px #18344716;font-weight:800;transform:rotate(5deg)}
+.benefits{background:#fff8fa;border-block:1px solid #ffe0e9}
+.benefit-inner{max-width:1180px;margin:auto;padding:17px 22px;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.benefit{display:flex;gap:10px;align-items:center;font-size:13px}.benefit b{display:block;color:var(--pink)}.benefit span{font-size:22px}
+.section{max-width:1180px;margin:auto;padding:48px 22px}
+.section-head{text-align:center;margin-bottom:25px}.section-head h2{font-size:32px;margin:0 0 8px;color:#1d5268}.section-head p{margin:0;color:#73838b}
+.categories{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.category{border:2px solid transparent;background:#fff7fa;border-radius:20px;padding:17px 8px;text-align:center;transition:.2s}
+.category:hover,.category.active{border-color:var(--pink);transform:translateY(-3px)}
+.category .emoji{font-size:34px;display:block;margin-bottom:7px}.category b{font-size:14px;display:block}.category small{color:#788992}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:15px;margin:26px 0 18px;flex-wrap:wrap}
+.toolbar h3{font-size:23px;margin:0}.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters input{border:1px solid #eadde1;border-radius:24px;padding:10px 15px;min-width:190px;outline-color:var(--pink)}
+.filters select{border:1px solid #eadde1;border-radius:24px;padding:10px 14px;background:#fff}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.product{border:1px solid #f3e9ec;border-radius:18px;overflow:hidden;background:#fff;transition:.2s}
+.product:hover{transform:translateY(-4px);box-shadow:0 12px 30px #1834470d}
+.product-visual{height:190px;display:grid;place-items:center;position:relative;background:var(--bg,#fff0f5);overflow:hidden}
+.beads{width:135px;height:135px;border:18px dotted var(--bead,#f0447b);border-radius:50%;box-shadow:0 0 0 8px #ffbd45,0 0 0 16px #38b5bd;transform:rotate(-20deg);filter:drop-shadow(0 8px 5px #0001)}
+.product:nth-child(3n) .beads{border-color:#7d6ee8;box-shadow:0 0 0 8px #f0447b,0 0 0 16px #ffbd45}
+.product:nth-child(4n) .beads{border-color:#38b5bd;box-shadow:0 0 0 8px #ff78a0,0 0 0 16px #f5c24f}
+.tag{position:absolute;top:12px;left:12px;background:#fff;border-radius:20px;padding:5px 9px;font-size:11px;font-weight:850;color:var(--pink)}
+.product-info{padding:15px}.product-info h4{margin:0 0 6px;font-size:15px}.product-info p{margin:0 0 12px;color:#72828b;font-size:12px;min-height:30px}
+.price{font-weight:900;font-size:19px;color:#1d5268}.product-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:12px}
+.add{background:var(--pink);color:#fff;border-radius:22px;padding:9px 12px;font-size:12px;font-weight:850}.add:hover{background:#d92d65}
+.about{background:#effbfa}.about-inner{max-width:1180px;margin:auto;padding:42px 22px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px}
+.about h2{font-size:31px;margin:0 0 12px}.about p{line-height:1.7;color:#58717d}
+.about-bubble{background:#fff;border-radius:30px;padding:30px;text-align:center;font-size:70px}
+footer{background:#14242c;color:#fff;padding:32px 22px}.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.footer-inner p{color:#b9c8ce;font-size:13px}.footer-inner a{color:#ffd0de}
+.cart-panel{position:fixed;z-index:20;inset:0;background:#0b1c2680;display:none;justify-content:flex-end}.cart-panel.open{display:flex}.cart{background:#fff;width:min(440px,100%);height:100%;padding:24px;overflow:auto;box-shadow:-10px 0 35px #0002}
+.cart-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;padding-bottom:14px}.cart-head h2{margin:0}.close{background:#f8eaf0;border-radius:50%;width:38px;height:38px;font-size:22px;color:var(--pink)}
+.cart-line{display:grid;grid-template-columns:1fr auto;gap:8px;padding:16px 0;border-bottom:1px solid #f1e7eb}.cart-line small{display:block;color:#71838d;margin-top:4px}.qty{display:flex;align-items:center;gap:9px;margin-top:9px}.qty button{background:#fce8ef;border-radius:50%;width:26px;height:26px;color:var(--pink);font-weight:900}
+.cart-total{display:flex;justify-content:space-between;font-size:20px;font-weight:900;padding:20px 0}
+.checkout{width:100%;padding:14px}.empty{text-align:center;padding:50px 5px;color:#74858d}
+.notice{font-size:12px;color:#7b8b91;line-height:1.5;margin-top:10px}
+@media(max-width:800px){nav{display:none}.hero-inner{grid-template-columns:1fr;padding-top:35px}.hero-art{min-height:230px}.bracelet-art{width:230px}.benefit-inner{grid-template-columns:repeat(2,1fr)}.categories{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:repeat(2,1fr);gap:12px}.product-visual{height:150px}.beads{width:95px;height:95px;border-width:13px}.about-inner{grid-template-columns:1fr}.section{padding:35px 15px}.nav{padding:12px 15px}.logo{font-size:35px}}
+@media(max-width:380px){.products{grid-template-columns:1fr}.product-visual{height:190px}.benefit-inner{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="announcement">♡ Pulseiras feitas à mão com muito amor! ♡</div>
+<header><div class="nav">
+<a class="logo" href="#" aria-label="Lala início">lala♡<small>.com.br</small></a>
+<nav><a href="#inicio">Início</a><a href="#produtos">Produtos</a><a href="#colecoes">Coleções</a><a href="#sobre">Sobre nós</a></nav>
+<button class="cart-top" onclick="openCart()">🛍 Carrinho (<span id="cartCount">0</span>)</button>
+</div></header>
+<main>
+<section class="hero" id="inicio"><div class="hero-inner">
+<div><div class="eyebrow">Pulseiras coloridas • Feitas à mão</div><h1>Mais cor<br>para o seu <span>dia!</span></h1>
+<p>Pulseiras de miçangas feitas à mão, com muito carinho para você se expressar, combinar e colecionar.</p>
+<a class="btn" href="#produtos">Ver pulseiras&nbsp; →</a></div>
+<div class="hero-art"><div class="bracelet-art"></div><div class="sticker">Pequenos detalhes,<br>grandes sorrisos ♡</div></div>
+</div></section>
+<section class="benefits"><div class="benefit-inner">
+<div class="benefit"><span>🚚</span><div><b>Envio para todo o Brasil</b><small>Frete calculado no pedido</small></div></div>
+<div class="benefit"><span>♡</span><div><b>Feitas à mão</b><small>Cada peça é especial</small></div></div>
+<div class="benefit"><span>🎨</span><div><b>Cheias de cor</b><small>Combine do seu jeito</small></div></div>
+<div class="benefit"><span>🎁</span><div><b>Para presentear</b><small>Monte seu kit favorito</small></div></div>
+</div></section>
+<section class="section" id="colecoes">
+<div class="section-head"><h2>Nossas coleções ✨</h2><p>Encontre as cores que combinam com você.</p></div>
+<div class="categories">
+<button class="category active" data-filter="Todas"><span class="emoji">🌈</span><b>Todas</b><small>Ver coleção completa</small></button>
+<button class="category" data-filter="Clássicas"><span class="emoji">💗</span><b>Clássicas</b><small>As queridinhas</small></button>
+<button class="category" data-filter="Personalizadas"><span class="emoji">🔤</span><b>Personalizadas</b><small>Com letras e nomes</small></button>
+<button class="category" data-filter="Neon"><span class="emoji">💚</span><b>Neon</b><small>Para se destacar</small></button>
+<button class="category" data-filter="Kits"><span class="emoji">🎁</span><b>Kits</b><small>Mais cor para combinar</small></button>
+</div>
+</section>
+<section class="section" id="produtos" style="padding-top:8px">
+<div class="toolbar"><h3>Pulseiras favoritas 💕</h3><div class="filters"><input id="search" type="search" placeholder="Buscar pulseiras..." aria-label="Buscar pulseiras"><select id="sort" aria-label="Ordenar produtos"><option value="featured">Em destaque</option><option value="low">Menor preço</option><option value="high">Maior preço</option></select></div></div>
+<div class="products" id="products"></div>
+</section>
+<section class="about" id="sobre"><div class="about-inner"><div><div class="eyebrow">Feito com carinho</div><h2>Um pouquinho de cor, um montão de amor.</h2><p>Na Lala, cada pulseira é montada à mão para celebrar seu estilo, suas amizades e os pequenos momentos felizes. Escolha suas favoritas e crie combinações que são só suas!</p><a class="btn" href="#produtos">Escolher minhas pulseiras</a></div><div class="about-bubble">🌷🌈💖</div></div></section>
+</main>
+<footer><div class="footer-inner"><div><div class="logo">lala♡</div><p>Mais cor na sua vida!</p></div><div><b>Atendimento</b><p>Segunda a sexta<br>Contato: adicione seu e-mail/WhatsApp</p></div><div><b>Redes sociais</b><p>Instagram: adicione seu perfil</p></div><div><b>Informações</b><p><a href="#sobre">Sobre a Lala</a><br><a href="#produtos">Produtos</a><br>Política de troca e entrega</p></div></div><p style="text-align:center;margin:25px 0 0">© <span id="year"></span> Lala. Feito à mão com amor.</p></footer>
+<div class="cart-panel" id="cartPanel" role="dialog" aria-modal="true" aria-label="Carrinho de compras" onclick="if(event.target===this)closeCart()"><div class="cart">
+<div class="cart-head"><h2>Seu carrinho 🛍</h2><button class="close" onclick="closeCart()" aria-label="Fechar carrinho">×</button></div>
+<div id="cartItems"></div><div class="cart-total"><span>Total</span><span id="cartTotal">R$ 0,00</span></div>
+<button class="btn checkout" onclick="checkout()">Continuar pedido</button>
+<p class="notice">Esta é uma versão inicial de demonstração. O checkout final e o pagamento online precisam ser conectados antes da loja entrar em produção.</p>
+</div></div>
+<script>
+const products = [
+{id:1,name:"Pulseira Flores Coloridas",cat:"Clássicas",price:24.90,desc:"Uma mistura alegre de cores.",bead:"#f0447b",tag:"Mais vendida"},
+{id:2,name:"Pulseira Meu Nome",cat:"Personalizadas",price:29.90,desc:"Personalize com letras e carinho.",bead:"#ffbd45",tag:"Personalizável"},
+{id:3,name:"Kit Neon (3 unidades)",cat:"Kits",price:39.90,desc:"Três pulseiras para combinar.",bead:"#8bdc56",tag:"Economize"},
+{id:4,name:"Pulseira Olho Grego",cat:"Clássicas",price:26.90,desc:"Um toque de azul no seu look.",bead:"#35a9b8",tag:"Novidade"},
+{id:5,name:"Pulseira Candy",cat:"Clássicas",price:22.90,desc:"Tons suaves e delicados.",bead:"#ff9cbd",tag:"Delicada"},
+{id:6,name:"Mix Colorido (5 unidades)",cat:"Kits",price:59.90,desc:"Um arco-íris para o seu pulso.",bead:"#f0447b",tag:"Kit especial"},
+{id:7,name:"Pulseira Neon Pink",cat:"Neon",price:19.90,desc:"Vibrante, divertida e cheia de atitude.",bead:"#ff3984",tag:"Chegou!"},
+{id:8,name:"Pulseira Letras & Cores",cat:"Personalizadas",price:32.90,desc:"Monte uma mensagem que é sua.",bead:"#ffbd45",tag:"Personalizável"}
+];
+let cart = [];
+let activeFilter = "Todas";
+const money = n => n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+function renderProducts(){
+ let list=products.filter(p=>(activeFilter==="Todas"||p.cat===activeFilter)&&(`${p.name} ${p.cat} ${p.desc}`).toLowerCase().includes(document.getElementById("search").value.toLowerCase()));
+ const sort=document.getElementById("sort").value;
+ if(sort==="low")list.sort((a,b)=>a.price-b.price); if(sort==="high")list.sort((a,b)=>b.price-a.price);
+ document.getElementById("products").innerHTML=list.length?list.map(p=>`<article class="product"><div class="product-visual" style="--bg:${p.id%2?'#fff0f5':'#effbfa'};--bead:${p.bead}"><span class="tag">${p.tag}</span><div class="beads" aria-label="Ilustração de pulseira colorida"></div></div><div class="product-info"><h4>${p.name}</h4><p>${p.desc}</p><div class="product-bottom"><span class="price">${money(p.price)}</span><button class="add" onclick="addToCart(${p.id})">+ Adicionar</button></div></div></article>`).join(""):'<p>Não encontramos pulseiras com esse nome. Tente outra busca.</p>';
+}
+function addToCart(id){const p=products.find(x=>x.id===id);const item=cart.find(x=>x.id===id);if(item)item.qty++;else cart.push({...p,qty:1});updateCart();openCart();}
+function changeQty(id,delta){const item=cart.find(x=>x.id===id);if(!item)return;item.qty+=delta;if(item.qty<=0)cart=cart.filter(x=>x.id!==id);updateCart();}
+function updateCart(){
+ const count=cart.reduce((s,p)=>s+p.qty,0),total=cart.reduce((s,p)=>s+p.qty*p.price,0);
+ document.getElementById("cartCount").textContent=count;document.getElementById("cartTotal").textContent=money(total);
+ document.getElementById("cartItems").innerHTML=cart.length?cart.map(p=>`<div class="cart-line"><div><b>${p.name}</b><small>${money(p.price)} cada</small><div class="qty"><button onclick="changeQty(${p.id},-1)" aria-label="Diminuir quantidade">−</button><span>${p.qty}</span><button onclick="changeQty(${p.id},1)" aria-label="Aumentar quantidade">+</button></div></div><b>${money(p.price*p.qty)}</b></div>`).join(""):'<div class="empty"><div style="font-size:44px">🛍</div><b>Seu carrinho está vazio</b><p>Que tal escolher algumas cores?</p></div>';
+}
+function openCart(){document.getElementById("cartPanel").classList.add("open");document.body.style.overflow="hidden";}
+function closeCart(){document.getElementById("cartPanel").classList.remove("open");document.body.style.overflow="";}
+function checkout(){if(!cart.length){alert("Adicione pelo menos uma pulseira ao carrinho.");return;}const order=cart.map(p=>`${p.qty}x ${p.name} — ${money(p.price*p.qty)}`).join("\\n");const total=money(cart.reduce((s,p)=>s+p.qty*p.price,0));alert("Pedido de demonstração:\\n\\n"+order+"\\n\\nTotal: "+total+"\\n\\nPara receber pedidos reais, conecte seu WhatsApp ou uma plataforma de pagamento antes de publicar a loja.");}
+document.querySelectorAll(".category").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".category").forEach(x=>x.classList.remove("active"));b.classList.add("active");activeFilter=b.dataset.filter;renderProducts();document.getElementById("produtos").scrollIntoView({behavior:"smooth"});}));
+document.getElementById("search").addEventListener("input",renderProducts);document.getElementById("sort").addEventListener("change",renderProducts);document.getElementById("year").textContent=new Date().getFullYear();
+renderProducts();updateCart();
+</script>
+
+<script>
+/* Lala: mensagem informativa no console. Isto não bloqueia ferramentas de desenvolvedor. */
+(() => {
+  console.log("%cLala • Pulseiras feitas à mão", "color:#f0447b;font-size:18px;font-weight:bold");
+  console.warn("Área de desenvolvimento: não coloque senhas, tokens ou chaves privadas no HTML/JavaScript.");
+  console.log("A Lala nunca pede senha bancária nem códigos de segurança.");
+})();
+</script>
+
+</body></html>
